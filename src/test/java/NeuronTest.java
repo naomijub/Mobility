@@ -52,6 +52,15 @@ public class NeuronTest {
         neuron.setInputI(0, 1);
         neuron.setInputI(1, 1);
         neuron.tanh();
-        Assert.assertTrue(neuron.getOutput() >= 0);
+        Assert.assertTrue(neuron.getOutput() >= -2);
+    }
+
+    @Test
+    public void checkIfOutputIsSmallerThanTwo(){
+        neuron.defineWeights();
+        neuron.setInputI(0, 10);
+        neuron.setInputI(1, 10);
+        neuron.tanh();
+        Assert.assertTrue(neuron.getOutput() <= 2);
     }
 }

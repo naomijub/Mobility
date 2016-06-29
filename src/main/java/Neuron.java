@@ -15,6 +15,13 @@ public class Neuron {
         weight = new double[n];
         this.n = n;
         rg = new Random();
+        allOneWeights();
+    }
+
+    public void allOneWeights(){
+        for(int i = 0;i < n;i++){
+            weight[i] = 1;
+        }
     }
 
     public double[] getInput(){
@@ -37,7 +44,9 @@ public class Neuron {
 
     public void defineWeights(){
         for(int i = 0; i < n;i++){
-            weight[i] = (rg.nextInt(9) - 4) / 4;
+            weight[i] = (rg.nextInt(9) - 4.0) / 4.0;
+
+            System.out.println(weight[i]);
         }
     }
 
