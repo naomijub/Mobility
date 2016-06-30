@@ -63,4 +63,10 @@ public class NeuronTest {
         neuron.tanh();
         Assert.assertTrue(neuron.getOutput() <= 2);
     }
+
+    @Test
+    public void CheckWeightUpdate(){
+        neuron.setWeightI(0, 3);
+        assertThat(neuron.getWeight()[0], is(3.0));
+    }
 }

@@ -42,11 +42,15 @@ public class Neuron {
         }
     }
 
+    public void setWeightI(int i, double weightPartial){
+        weight[i] = weightPartial;
+    }
+
     public void defineWeights(){
         for(int i = 0; i < n;i++){
             weight[i] = (rg.nextInt(9) - 4.0) / 4.0;
 
-            System.out.println(weight[i]);
+            //System.out.println(weight[i]);
         }
     }
 
