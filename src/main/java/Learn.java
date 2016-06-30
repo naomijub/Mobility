@@ -35,7 +35,7 @@ public class Learn {
                 hidError(in, hid, out, outError);
             }
             currentError = errorStep / expectedResults.length;
-            System.out.println(count + " current error: " + currentError);
+            if(count % 100 == 0) System.out.println(count + " current error: " + currentError);
             count++;
         }
     }

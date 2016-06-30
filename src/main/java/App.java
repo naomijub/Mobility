@@ -10,7 +10,7 @@ public class App {
         out[0].defineWeights();
         Think think = new Think(in, hid, out);
 
-        Learn learn = new Learn(0.7, new double[][]{{0,0} , {1,1}, {1,0} , {0,1}}, new double[]{0, 0, 1, 1});
+        Learn learn = new Learn(0.9, new double[][]{{0,0} , {1,1}, {1,0} , {0,1}}, new double[]{0, 0, 1, 1});
         learn.train(in, hid, out, 0.01);
 
 
