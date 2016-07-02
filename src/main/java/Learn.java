@@ -21,7 +21,7 @@ public class Learn {
     //for the first block the training will be little skewed
     public void train(Neuron[] in, Neuron[] hid, Neuron[] out, double error){
         double currentError = 10000;
-        int count = 0;
+        long count = 0;
         Think think;
         while(currentError > error){
             double errorStep = 0;
@@ -35,7 +35,7 @@ public class Learn {
                 hidError(in, hid, out, outError);
             }
             currentError = errorStep / expectedResults.length;
-            if(count % 100 == 0) System.out.println(count + " current error: " + currentError);
+            if(count % 100000 == 0) System.out.println(count + " current error: " + currentError);
             count++;
         }
     }
